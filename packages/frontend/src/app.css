@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+	--color-tkbg: oklch(28.19% 0.0355 274.75);
+	--color-tkfg: oklch(92.89% 0.0081 278.63);
+	--color-tkblack: oklch(22.63% 0.0214 280.49);
+	--color-tkgreenpale: oklch(93.63% 0.0684 194.91);
+	--color-tkgreen: oklch(82.17% 0.0996 182.49);
+	--color-tkorange: oklch(78.7% 0.1373 50.56);
+	--color-tkstraw: oklch(72.27% 0.1589 10.28);
+}
+

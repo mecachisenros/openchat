@@ -1,0 +1,31 @@
+{
+  "name": "@openchat/db",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "db": "sst shell drizzle-kit",
+    "push": "drizzle-kit push",
+    "generate": "drizzle-kit generate",
+    "migrate": "drizzle-kit migrate",
+    "studio": "drizzle-kit studio"
+  },
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./schema": {
+      "default": "./src/schema.ts"
+    }
+  },
+  "dependencies": {
+    "@aws-sdk/client-rds-data": "^3.758.0",
+    "drizzle-orm": "^0.40.0",
+    "pg": "^8.13.3",
+    "sst": "*"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.11",
+    "drizzle-kit": "^0.30.5"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@openchat/uuid",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    }
+  },
+  "dependencies": {
+    "nanoid": "^5.1.3"
+  }
+}

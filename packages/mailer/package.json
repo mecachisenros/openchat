@@ -1,0 +1,19 @@
+{
+  "name": "@openchat/mailer",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    }
+  },
+  "dependencies": {
+    "mjml": "^4.15.3",
+    "nodemailer": "^6.10.0"
+  },
+  "devDependencies": {
+    "@types/mjml": "^4.7.4",
+    "@types/nodemailer": "^6.4.17"
+  }
+}

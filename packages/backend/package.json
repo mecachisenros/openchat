@@ -1,0 +1,25 @@
+{
+  "name": "@openchat/backend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file=.env src/api.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/groq": "^1.1.12",
+    "@hono/node-server": "^1.13.8",
+    "@openchat/db": "workspace:*",
+    "@openchat/mailer": "workspace:*",
+    "@openauthjs/openauth": "^0.4.3",
+    "@openchat/uuid": "workspace:*",
+    "ai": "^4.1.54",
+    "hono": "^4.7.4",
+    "sst": "*",
+    "valibot": "1.0.0-rc.3"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8",
+    "tsx": "^4.19.3"
+  }
+}
