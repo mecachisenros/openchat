@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch --env-file=.env src/api.ts"
+    "dev": "tsx watch --env-file=.env src/node.ts"
   },
   "dependencies": {
     "@ai-sdk/groq": "^1.1.12",

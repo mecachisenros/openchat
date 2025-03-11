@@ -14,8 +14,6 @@ import { uuid } from "@openchat/uuid";
 import { streamText, generateText } from "ai";
 import { createGroq } from "@ai-sdk/groq";
 
-import { auth } from "./auth";
-
 type JWT = {
   mode: "access" | "refresh";
   type: string;
@@ -106,13 +104,6 @@ api.post("/chat/:chatId", async (c) => {
   return new Response(null, { status: 200 });
 });
 
-auth.route("/", api);
-
-serve({
-  fetch: auth.fetch,
-  port: 3000,
-});
-
 async function processMessage(
   chatId: string,
   modelId: GroqChatModelId = "llama3-8b-8192",
@@ -149,3 +140,5 @@ async function createTitle(chatId: string, message: string) {
 
   await updateChatMessageTitle(chatId, text);
 }
+
+export default api;
