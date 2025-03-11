@@ -1,15 +1,19 @@
 import { drizzle } from "drizzle-orm/node-postgres";
 import pg from "pg";
+import { Resource } from "sst";
 
 import * as schema from "./schema";
 import { eq } from "drizzle-orm";
 
-if (!process.env.DATABASE_URL) {
-  throw new Error("missing DATABASE_URL env");
-}
-
 const pool = new pg.Pool({
-  connectionString: process.env.DATABASE_URL,
+  host: Resource.Postgres.host,
+  port: Resource.Postgres.port,
+  user: Resource.Postgres.username,
+  password: Resource.Postgres.password,
+  database: Resource.Postgres.database,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 export const db = drizzle({

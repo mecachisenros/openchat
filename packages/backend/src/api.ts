@@ -1,6 +1,7 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { jwk } from "hono/jwk";
+import { Resource } from "sst";
 
 import {
   db,
@@ -39,7 +40,7 @@ type GroqChatModelId =
   | (string & {});
 
 const groq = createGroq({
-  apiKey: process.env.GROQ_API_KEY,
+  apiKey: Resource.GroqApiKey.value,
 });
 
 const api = new Hono<{ Variables: { jwtPayload: JWT } }>().basePath("/api");
