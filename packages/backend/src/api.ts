@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { jwk } from "hono/jwk";
-import { serve } from "@hono/node-server";
+
 import {
   db,
   getChatMessages,
@@ -79,7 +79,7 @@ api.post("/chat", async (c) => {
     content: form.get("message"),
   });
 
-  processMessage(chatId);
+  processMessage(chatId, form.get("model") as string);
   createTitle(chatId, form.get("message") as string);
 
   return c.json({ chatId });
@@ -99,7 +99,7 @@ api.post("/chat/:chatId", async (c) => {
     content: form.get("message"),
   });
 
-  processMessage(chatId);
+  processMessage(chatId, form.get("model") as string);
 
   return new Response(null, { status: 200 });
 });
