@@ -3,9 +3,9 @@
 /* eslint-disable */
 /// <reference types="vite/client" />
 interface ImportMetaEnv {
-  readonly PUBLIC_AUTH_URL: string
-  readonly PUBLIC_API_URL: string
-  readonly PUBLIC_ZERO_URL: string
+  readonly VITE_AUTH_URL: string
+  readonly VITE_API_URL: string
+  readonly VITE_ZERO_URL: string
 }
 interface ImportMeta {
   readonly env: ImportMetaEnv

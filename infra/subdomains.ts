@@ -1,6 +1,6 @@
-const chat = "zchat.mecachisenros.com";
-const api = "api.zchat.mecachisenros.com";
-const zero = "zero.zchat.mecachisenros.com";
+const chat = "openchat.mecachisenros.com";
+const api = "api.openchat.mecachisenros.com";
+const zero = "zero.openchat.mecachisenros.com";
 
 export default {
   chat,

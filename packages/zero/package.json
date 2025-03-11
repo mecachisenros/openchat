@@ -4,7 +4,9 @@
   "type": "module",
   "version": "0.0.0",
   "scripts": {
-    "dev": "zero-cache-dev -p src/schema.ts"
+    "dev": "zero-cache-dev -p src/schema.ts",
+    "start": "zero-cache",
+    "permissions": "zero-deploy-permissions -p src/schema.ts"
   },
   "exports": {
     "./schema": {

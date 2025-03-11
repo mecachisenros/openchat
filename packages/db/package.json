@@ -19,7 +19,6 @@
     }
   },
   "dependencies": {
-    "@aws-sdk/client-rds-data": "^3.758.0",
     "drizzle-orm": "^0.40.0",
     "pg": "^8.13.3",
     "sst": "*"
